@@ -7,7 +7,7 @@ config.read('config.ini')
 def get_maintainers(owner, repo):
     """Fetches maintainers of a GitHub repository."""
 
-    url = f"https://api.github.com/repos/{owner}/{repo}/collaborators"
+    url = f"https://api.github.com/repos/{owner}/{repo}/teams"
     headers = {
         "Authorization": f"token {config['GITHUB']['api_token']}"
     }
